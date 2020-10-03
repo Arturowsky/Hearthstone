@@ -12,3 +12,4 @@ INCLUDES:
 Download and edit as you wish
 
 artur.lewandowicz@gmail.com
+Live demo : www.arturlewandowicz.com/hearthstone/index.html
