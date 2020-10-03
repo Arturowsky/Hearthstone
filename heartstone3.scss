@@ -1,0 +1,327 @@
+@import "colors";
+@import "navigation";
+@import "mixins";
+@import "buttons";
+@import "jsClasses";
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BODY STYLING */
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: $bodyBg;
+}
+/* NAVIGATION STYLING */
+nav {
+    width: 100%;
+    @include grid;
+    background: $navBgColor;
+    grid-template-columns: 500px 1fr 200px;
+    border-bottom: 5px solid $navBorderBottom;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+}
+.fab {
+    @include awsome;
+}
+.navUl {
+    a {
+        color: $navLinkColor;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-family: 'Roboto Slab', serif;
+        &:hover {
+            color: $navLinkColorHover;
+        }
+    }
+    li {
+        display: inline-block;
+        position: relative;
+        padding: 0 5px;
+        ul {
+            display:none;
+        }
+        &:hover {
+            ul {
+                display: block;
+                position: absolute;
+                left: 0;
+                background: $dropDown;
+                padding: 10px 10px;
+                box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.40);
+                li {
+                    padding: 5px 0;
+                }
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+.logo {
+    width: 300px;
+    height: auto;
+    // padding: 20px 0;
+}
+
+// HERO IMAGE
+.hero {
+    @include grid;
+    width: 100%;
+    height: 90vh;
+    background: url("../images/ht4.jpg");
+    .hero__group {
+        @include grid;
+    }
+    h1 {
+        color: $h1;
+        font-size: 4rem;
+        @include heroFonts;
+    }
+    p {
+        color: $hero-p;
+        font-size: 1.2rem;
+        @include heroFonts;
+    }
+}
+// CHAMPIONS SECTION
+.champions {
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.description {
+    p {
+        color: $navLinkColor;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 768px) {
+    .champions {
+        @include mobile;
+        place-items: center;
+    }
+    .description {
+        @include mobile;
+        place-items: center;
+        p {
+            color: $navLinkColor;
+            text-align: center;
+        }
+    }
+}
+
+// GAME UPDATES
+.gameUpdates {
+    width: 100%;
+    @include grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 30px 0;
+}
+// INHERITED FROM PREVIOUS VERSION OF HEARTSTONE BY ARTUR L.
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: .5rem;
+    margin: 30px;
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;   
+    }
+}
+@media (max-width: 768px) {
+    .grid > *:first-child {
+        grid-template-columns: 1fr;
+        grid-column: 1;
+    }
+}
+@media (max-width: 768px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+        grid-column: 1;
+    }
+}
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-column: 1;
+    }
+}
+@media (max-width: 500px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+        justify-self: center;
+    }
+}
+.item {
+    @include blog;
+    &:hover {
+        top: -5px;
+        position: relative;
+        box-shadow: 5px 5px 5px rgba(93, 75, 190, 0.15);
+        cursor: pointer;
+    }
+}
+.itemNoHover {
+    @include blog;
+    background: $navBgColor;
+}
+.item-long {
+    @include blog;
+    grid-column: 1 /span 2;
+    // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.full-bg {
+    background-image: url("../images/stadium2.jpg");
+    margin: .5rem;
+    padding: .5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    color: #eee;
+    position: relative;
+}
+.full-bg::before {
+    content: '';
+    background-color: rgba(10, 110,210, 0.7);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.full-bg::after {
+    z-index: 2;
+}
+
+.item:nth-child(2) {
+    border: 1px #ddd solid;
+    margin: .5rem;
+    padding: .5rem;
+    background: tomato;
+    color: #fff;
+}
+
+.htext {
+    color: #31336c;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 10px
+}
+.htext2 {
+    color: #343434;
+    font-family: 'Roboto Slab', serif;
+    padding: 20px 10px;
+
+}
+.htext::before {
+    content: url(../images/before3.png);
+}
+p {
+    font-size: 1rem;
+    color: #7e858c;
+    font-family: 'Roboto Slab', serif;
+    justify-self: center;
+}
+
+.orange-box {
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+}
+.just {
+    font-size: 1.2rem;
+}
+.container {
+    p {
+        text-align: center;
+    }
+}
+// MEDIA QUERIES FOR PHONE 360PX MAX RESOLUTION
+// 1.Navigation Large Screen
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .hero {
+        height: 100vh;
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+// 2. Navigation Mobile Device
+@media (min-width: 769px) {
+    .menuMobile {
+        display: none;
+    }
+    .logoMobile {
+        display: none;
+    }
+    .linkMobile {
+        display: none;
+        ul {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
+    nav {
+        display: none;
+    }
+    .menuMobile {
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        background: $navBgColor;
+        padding: 20px 15px;
+    }
+    .logoMobile {
+        padding: 10px 10px;
+        border-bottom: 1px solid $mobileNaviLine;
+        background: $navBgColor;
+    }
+    .linkMobile {
+        background: $navBgColor;
+        @include grid;
+        ul {
+            display: none;
+            li {
+                list-style: none;
+            }
+            a {
+                color: black;
+                font-size: 1.2rem;
+                line-height: 2;
+                font-weight: bolder;
+
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        background: url("../images/mobile-bg2.jpg");
+        p {
+            color: lighten($hero-p, 20);
+        }
+    }
+}
