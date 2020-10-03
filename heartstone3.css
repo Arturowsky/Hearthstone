@@ -1,0 +1,467 @@
+.btn-hero {
+  background: tomato;
+  padding: 1rem 2rem;
+  border: 1px #ccc solid;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-hero:hover {
+  color: tomato;
+  background: #ddd;
+  border: 1px solid #343434;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-invite {
+  background: #0984e3;
+  padding: 1rem 2rem;
+  border: 1px #ccc solid;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-invite:hover {
+  color: #0984e3;
+  background: #ddd;
+  border: 1px solid #343434;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-invite:active {
+  top: 3px;
+  position: relative;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.expandMobileMenu {
+  height: 300px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* BODY STYLING */
+body {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dcdde1;
+}
+
+/* NAVIGATION STYLING */
+nav {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #feca57;
+  -ms-grid-columns: 500px 1fr 200px;
+      grid-template-columns: 500px 1fr 200px;
+  border-bottom: 5px solid tomato;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+
+.fab {
+  font-size: 1.4rem;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+
+.fab:hover {
+  color: #6D214F;
+}
+
+.navUl a {
+  color: #34495e;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+}
+
+.navUl a:hover {
+  color: #8e44ad;
+}
+
+.navUl li {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+}
+
+.navUl li ul {
+  display: none;
+}
+
+.navUl li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  background: #fa983a;
+  padding: 10px 10px;
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.navUl li:hover ul li {
+  padding: 5px 0;
+}
+
+.navUl li:hover ul a {
+  color: #fff;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 90vh;
+  background: url("../images/ht4.jpg");
+}
+
+.hero .hero__group {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.hero p {
+  color: #a1a1a1;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.champions {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.description p {
+  color: #34495e;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .champions {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .description p {
+    color: #34495e;
+    text-align: center;
+  }
+}
+
+.gameUpdates {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  padding: 30px 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: .5rem;
+}
+
+.grid2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: .5rem;
+  margin: 30px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid > *:first-child {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.item {
+  border: 1px #ddd solid;
+  margin: .5rem;
+  padding: .5rem;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.item:hover {
+  top: -5px;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 5px rgba(93, 75, 190, 0.15);
+          box-shadow: 5px 5px 5px rgba(93, 75, 190, 0.15);
+  cursor: pointer;
+}
+
+.itemNoHover {
+  border: 1px #ddd solid;
+  margin: .5rem;
+  padding: .5rem;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  background: #feca57;
+}
+
+.item-long {
+  border: 1px #ddd solid;
+  margin: .5rem;
+  padding: .5rem;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 /span 2;
+}
+
+.full-bg {
+  background-image: url("../images/stadium2.jpg");
+  margin: .5rem;
+  padding: .5rem;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  color: #eee;
+  position: relative;
+}
+
+.full-bg::before {
+  content: '';
+  background-color: rgba(10, 110, 210, 0.7);
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.full-bg::after {
+  z-index: 2;
+}
+
+.item:nth-child(2) {
+  border: 1px #ddd solid;
+  margin: .5rem;
+  padding: .5rem;
+  background: tomato;
+  color: #fff;
+}
+
+.htext {
+  color: #31336c;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 10px;
+}
+
+.htext2 {
+  color: #343434;
+  font-family: 'Roboto Slab', serif;
+  padding: 20px 10px;
+}
+
+.htext::before {
+  content: url(../images/before3.png);
+}
+
+p {
+  font-size: 1rem;
+  color: #7e858c;
+  font-family: 'Roboto Slab', serif;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.orange-box {
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem;
+}
+
+.just {
+  font-size: 1.2rem;
+}
+
+.container p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .menuMobile {
+    display: none;
+  }
+  .logoMobile {
+    display: none;
+  }
+  .linkMobile {
+    display: none;
+  }
+  .linkMobile ul {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+  nav {
+    display: none;
+  }
+  .menuMobile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 30px;
+        grid-template-columns: 1fr 30px;
+    background: #feca57;
+    padding: 20px 15px;
+  }
+  .logoMobile {
+    padding: 10px 10px;
+    border-bottom: 1px solid #636e72;
+    background: #feca57;
+  }
+  .linkMobile {
+    background: #feca57;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  .linkMobile ul {
+    display: none;
+  }
+  .linkMobile ul li {
+    list-style: none;
+  }
+  .linkMobile ul a {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 2;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url("../images/mobile-bg2.jpg");
+  }
+  .hero p {
+    color: #d4d4d4;
+  }
+}
+/*# sourceMappingURL=heartstone3.css.map */
